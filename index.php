@@ -35,6 +35,7 @@
 				}
 			}
 		?>
+		
 		</section>
 
 		<section id="login" class="login">

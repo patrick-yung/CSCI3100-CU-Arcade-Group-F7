@@ -25,10 +25,9 @@
                     echo "<li><a href='#'>Hello GUEST </a></li>";
                 }
             ?>
-            <li><a href='Project.php'>Profile</a> </li>
-            <li><a href='Project.php' >Working Project</a> </li>
-            <li><a href='Project.php'>Finish Project</a> </li>
-            <li><a href='Project.php'>Contact Me</a> </li>(
+            <li><a href='Project.php'>Home Page</a> </li>
+            <li><a href='Project.php'>Game</a> </li>
+            <li><a href='email.php'>Confirm  Email</a> </li>(
 
           <?php
                 if(isset($_SESSION["userid"])){
