@@ -74,7 +74,7 @@ function createUser($conn, $name, $email, $username, $password){
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'csci3100tmp@gmail.com';
-        $mail->Password = 'milk1234567';
+        $mail->Password = 'csci31002022';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
         $mail->setFrom('csci3100tmp@gmail.com', 'CSCI3100');
