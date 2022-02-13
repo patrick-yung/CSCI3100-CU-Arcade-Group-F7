@@ -5,7 +5,7 @@ $username=$_POST["uid"];
 $password=$_POST["pwd"];
 
 require_once 'dbh.inc.php';
-require_once 'functions.inc.php';
+require_once 'login_function.php';
 
 if(emptyInputLogin($username, $password)!== false){
     header("location: ../index.php?error=emtpyinput");

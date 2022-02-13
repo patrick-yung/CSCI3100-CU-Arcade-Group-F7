@@ -4,7 +4,6 @@ $dBusersName = "root";
 $dBpassword = "";
 $dBName= "phpproject01";
 
-
 // Create connection
 $conn = mysqli_connect($servername, $dBusersName, $dBpassword, $dBName);
 

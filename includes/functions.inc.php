@@ -1,4 +1,12 @@
 <?php
+#Reset Password
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+require '../vendor/autoload.php';
+
+
+#Sign up 
 function emptyInputSignup($name, $email,$username, $password, $passwordrepeat){
     $result= null;
     if(empty($name)||empty($email)||empty($username)||empty($password)||empty($passwordrepeat)){
@@ -19,6 +27,7 @@ function InvalidEmail($email){
     return $result;
 }
 
+#login
 function pwdMatch($password, $passwordrepeat){
     $result= null;
     if($password!==$passwordrepeat){
@@ -48,61 +57,45 @@ function uidMatch($conn, $username, $email){
         mysqli_stmt_close($stmt);
     }
 }
+
+#Create User
 function createUser($conn, $name, $email, $username, $password){
-    $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
+
+    $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd, usercode) VALUES (?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
         header("location: ../index.php?error=stmfailed");
         exit();
     }else{
+        $mail = new PHPMailer(true);
+        $mail->SMTPDebug = 0;//SMTP::DEBUG_SERVER;
+ 
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'csci3100tmp@gmail.com';
+        $mail->Password = 'milk1234567';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+        $mail->setFrom('csci3100tmp@gmail.com', 'CSCI3100');
+        $mail->addAddress($email, $name);
+        $mail->isHTML(true);
+        $mail->Subject = 'Email verification';
+        $code=rand( 1000,  9999);
+        $mail->Body    = '<p>Your verification code is: <b style="font-size: 30px;">' . $code . '</b></p>';
+        $mail->send();
         $hashed=password_hash($password, PASSWORD_DEFAULT);
-        mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashed);
+        mysqli_stmt_bind_param($stmt, "ssssi", $name, $email, $username, $hashed, $code);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
-        header("location: ../index.php?error=signnone");
-        exit();
-    }
-}
-//Login Stuff//
-function emptyInputLogin($username, $password){
-    $result= null;
-    if(empty($username)||empty($password)){
-        $result=true;
-    }else{
-        $result=false;
-    }
-    return $result;
-}
-
-
-function loginUser($conn, $username, $password){
-    $uidExists=uidMatch($conn, $username, $username);
-
-    if($uidExists === false){
-        header("location: ../index.php?error=wronginput");
-        exit();
-    }
-    $pwdhash = $uidExists["usersPwd"];
-    $check = password_verify($password, $pwdhash);
-
-    if($check  === false){
-        header("location: ../index.php?error=bad password");
-        exit();
-    }else if($check  === true){
-        session_start();
-        $_SESSION["userid"] = $uidExists["usersPwd"];
-        $_SESSION["useruid"] = $uidExists["usersUid"];
-        header("location: ../project.php?");
+        die("Please verify your email <a href='../email.php?email=" . $email . "'>from here</a>");
         exit();
     }
 }
 
 
-#Reset Password
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+
 
 //Load Composer's autoloader
 
@@ -114,14 +107,13 @@ function send_password_reset($get_name, $get_email, $token){
         $mail->SMTPAuth=true;
       
 
-        $mail->Host       = 'localhost';                     //Set the SMTP server to send through
-        $mail->Username   = 'patrickyyung@gmail.com';                     //SMTP username
+        $mail->Host       = 'localhost';                  
+        $mail->Username   = 'patrickyyung@gmail.com';                 
         $mail->Password   = 'dog123';    
-                                   //SMTP password
         $mail->Port       = 465;  
     
         //Recipients
-        $mail->setFrom('from@example.com', $get_name);
+        $mail->setFrom('csci3100@example.com', $get_name);
         $mail->addAddress($get_email);               //Name is optional
  
         $mail->isHTML(true);
