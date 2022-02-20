@@ -57,7 +57,7 @@ function loginUser($conn, $username, $password){
         session_start();
         $_SESSION["userid"] = $uidExists["usersPwd"];
         $_SESSION["useruid"] = $uidExists["usersUid"];
-        header("location: ../project.php?");
+        header("location: ../home.php?");
         exit();
     }
 }

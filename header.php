@@ -16,27 +16,29 @@
 <body>
     <header>
         <div class="box"></div>
-        <a href="#" class= "icon">PatrickYung</a>
+        <a href="#" class= "icon">CU Arcade</a>
         <ul>
         <?php
                  if(isAdmin()){
-                    echo "<li><a href='#'>WELCOME TECHNO_GUY </a></li>";
+                    echo "<li><a href='#'>WELCOME ADMIN </a></li>";
                 }else{
                     echo "<li><a href='#'>Hello GUEST </a></li>";
                 }
             ?>
-            <li><a href='Project.php'>Home Page</a> </li>
-            <li><a href='game/game.php'>Game</a> </li>
-            <li><a href='Loginandregister/email.php'>Confirm  Email</a> </li>(
+            <li><a href='home.php'>Home Page</a> </li>
+            <li><a href='leaderboard/leaderboard.php'>Leaderboard</a> </li>
 
           <?php
                 if(isset($_SESSION["userid"])){
-                    echo "<li><a href='Settings.php'>Setting</a> </li>";
+                    echo "<li><a href='game/game.php'>Game</a> </li>";
+                    echo "<li><a href='profile/Settings.php'>Setting</a> </li>";
                     echo "<li><a href='includes/logout.inc.php'>Logout</a> </li>";
                 }else{
+                    echo "<li><a href='Loginandregister/email.php'>Confirm  Email</a> </li>";
                     echo "<li><a href='Loginandregister/Register.php' class='active-btn'>Login/Sign in</a> </li>";   
                 }
             ?>
+            
 
         </ul>
     </header>

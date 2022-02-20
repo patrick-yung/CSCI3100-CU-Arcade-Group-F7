@@ -2,5 +2,5 @@
 session_start();
 session_unset();
 session_destroy();
-header("location: ../project.php?");
+header("location: ../home.php?");
 exit();

@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <?php include_once 'Format/header.php'?>
 
 <!DOCTYPE html>
@@ -5,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Jump Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Format/style.css">
 </head>
 <body>
     <div class="empty"></div>

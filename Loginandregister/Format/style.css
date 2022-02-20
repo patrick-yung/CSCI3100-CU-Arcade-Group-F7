@@ -7,7 +7,6 @@ body,html{
     background-size: cover;
     box-sizing: border-box;
     font: 400 15px/1.8 "Lato", sans-serif;
-
 }
 
 header {
@@ -49,7 +48,6 @@ header .welcome{
   letter-spacing: 2px;
   font-weight: 500px;
   padding: 15px 15px;
-
 }
 header ul {
     position: relative;
@@ -95,45 +93,12 @@ ul li a:hover {
 
 }
 
-.login, .EmailConfrim{
+.login{
   top: 80px;
   position: absolute;
   text-align: center;
   width: 280px;
   transition: .5s;
-}
-
-
-.EmailConfrim{
-left: 50px;
-right: 50px;
-}
-
-.EmailConfrim h1{
-  border: 0px;
-  background: rgba(243,243,171);
-  width: 85%;
-  display: block;
-  position: relative;
-  border-radius: 30px;
-  padding: 5px 30px;
-  outline: none;
-  color: black;
-}
-.EmailConfrim input[type="text"]{
-  width: 100%;
-  padding: 10px 0;
-  margin: 40px 0;
-  border-left: 0px;
-  border-right: 0px;
-  border-top: 0px;
-  border-bottom: 1px solid black;
-  background: white;
-  border-radius: 25px;
-  text-align: center;
-  bottom:10px;
-  outline: none;
-  cursor: pointer;
 }
 
 
@@ -214,53 +179,4 @@ right: 50px;
 
 
 
-/*Home*/
-.intro {
-    color: #777;
-    background-color: white;
-    text-align: center;
-    padding: 20px 80px;
-    text-align: justify;
-  }
 
-.empty{
-  position: relative;
-  opacity: 0.65;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100px;
-}
-
-.picture{
-  background-image: url("../pictures/Me.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index:-1;
-  position:relative;
-  min-height: 100%;
-}
-
-/*Rotate images*/
-.main-banner{
-  margin: 0 auto;
-  width: 1200px;
-  height: 600px;
-  background-color: white;
-  overflow: hidden;
-  position: relative;
-  z-index:999;
-}
-
-.main-banner .imgban{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  transition: all ease-in-out 500ms;
-  -webkit-animation:all ease-in-out 500ms;
-  -moz-transition:all ease-in-out 500ms;
-  -o-transition:all ease-in-out 500ms;
-
-}
