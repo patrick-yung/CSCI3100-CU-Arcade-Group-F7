@@ -1,5 +1,21 @@
-<?php include_once 'Format/header.php'?>
 <?php include_once '../includes/admins.php'?>
+
+<php
+		session_start();
+	?>
+	<?php include_once '../includes/admins.php'?>
+
+	<!DOCTYPE html>
+	<html lang="en" dir = "ltr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Project</title>
+		<link rel="stylesheet" href = "Format/style.css">
+
+	</head>
+
+	<body>
 
 
 	<div class="form-box" section class="signin/reg">
@@ -10,7 +26,7 @@
 		</div>
 
 		<section id="register" class="register">
-			<h1>Registeration</h1>
+			<h1>Create New User</h1>
 			<form action="sign.inc.php" method="post">
 			<input type="text" autocomplete="off" name="name" placeholder="Full Name" />
 			<input type="text" autocomplete="off" name="username" placeholder="Username" />
@@ -43,7 +59,7 @@
 			<form action="login.inc.php" method="post">
 			<input type="text" autocomplete="off" name="uid" placeholder="Username/Email" />
 			<input type="password" autocomplete="off" name="pwd" placeholder="Password" />
-			<button type="submit" name="LOGIN" >Log in</button>
+			<button type="submit" name="login" >Log in</button>
 			<div class="forget">
 				<a href="resetpassword.php">Forget password</a>
 			</div>

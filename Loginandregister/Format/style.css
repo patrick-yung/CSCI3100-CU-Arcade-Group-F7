@@ -1,79 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 body,html{
-    height: 100%;
+    height: 100px;
     margin: 0;
     padding: 0;
-    background-color: rgba(49,49,49,1);
+    width: 100%;
+    background-image: url(782965.png);
     background-size: cover;
     box-sizing: border-box;
-    font: 400 15px/1.8 "Lato", sans-serif;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(49,49,49,1);
-    align-items: left;
-    
-    padding-right: 0px;
-    padding-top: 40px;
-    z-index: 1000;
-    transition: 0.6s;
-  }
-
-
-
-header .icon{
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 30px;
-    padding-left: 20px;
-    padding-right: 0px;
-    position: absolute;
-
-    color: rgba(243,243,171);
-    display: flex;
-
-}
-header .welcome{
-  margin: 0 15px;
-  text-decoration: none;
-  color: rgba(243,243,171);
-  letter-spacing: 2px;
-  font-weight: 500px;
-  padding: 15px 15px;
-}
-header ul {
-    position: relative;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-  }
-  header ul li {
-    list-style: none;
-  }
-  header ul li a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: rgba(243,243,171);
-    letter-spacing: 2px;
-    font-weight: 500px;
-    padding: 15px 15px;
-  }
-  .active-btn,
-  ul li a:hover {
-    background: rgb(149, 174, 175);
-  }
-
-.active-btn,
-ul li a:hover {
-  background: rgb(149, 174, 175);
 }
 
 .toggle{
@@ -115,6 +48,8 @@ ul li a:hover {
   text-align: center;
   outline: none;
   cursor: pointer;
+  font-size: 10px;
+  font-family: Poppins;
 }
 
 .register button[type="submit"],.login button[type="submit"],.EmailConfrim button[type="submit"]{
@@ -122,17 +57,18 @@ ul li a:hover {
   background: rgba(243,243,171);
   width: 85%;
   display: block;
-  border-radius: 30px;
+  border-radius: 20px;
   margin: 10px auto;
-  padding: 10px 30px;
+  padding: 5px 30px;
   outline: none;
   color: black;
+  font-family: Poppins;
 }
 .register h1, .login h1{
-  font-size: 30px;
+  font-size: 20px;
 }
-
-.register .forget{
+.login .forget{
+  font-family: Poppins;
   font-size: 15px;
 }
 
@@ -145,11 +81,10 @@ ul li a:hover {
 
 .form-box{
   position: relative;
-  top:150px;
+  top:100px;
   width: 380px;
-  height: 480px;
+  height: 400px;
   background: #C6F8FC;
-  padding: 5px;
   border-radius: 30px;
   margin: 35px  auto; 
   z-index: 1000;
@@ -163,6 +98,7 @@ ul li a:hover {
   background-color: #C6F8FC;
   box-shadow: 0 0 20px 9px #b2f3e6;
   border-radius: 30px;
+  font-size: 15px;
 }
 
 #blk{
