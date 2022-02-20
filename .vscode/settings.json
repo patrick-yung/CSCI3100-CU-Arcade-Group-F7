@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "127.0.0.1\t",
+            "port": 3306,
+            "driver": "MySQL",
+            "database": "phpproject01",
+            "name": "Connection",
+            "username": "root",
+            "password": ""
+        }
+    ]
+}
