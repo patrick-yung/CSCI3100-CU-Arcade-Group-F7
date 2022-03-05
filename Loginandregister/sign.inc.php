@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../includes/dbh.inc.php';
-require_once 'signfunctions.inc.php';
+require_once 'signfunction.php';
 
 
 if(isset($_POST["submit"])){
@@ -18,12 +18,15 @@ if(isset($_POST["submit"])){
         header("location: Register.php?error=password don't match");
         exit();
     }
-    if(uidMatch($conn, $name, $email)!== false){
-        header("location: Register.php?error=username taken");
-        exit();
-    }
+    
 
     createUser($conn, $name, $email,$username, $password);
+
+
+    
+
+    
+
 }else{
     header("location: Register.php");
     exit();
