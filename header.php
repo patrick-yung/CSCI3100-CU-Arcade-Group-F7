@@ -29,7 +29,7 @@
             <li><a href='leaderboard/leaderboard.php'>Leaderboard</a> </li>
 
           <?php
-                if(isset($_SESSION["userid"])){
+                if(isset($_SESSION["usersID"])){
                     echo "<li><a href='game/game.php'>Game</a> </li>";
                     echo "<li><a href='profile/Settings.php'>Setting</a> </li>";
                     echo "<li><a href='includes/logout.inc.php'>Logout</a> </li>";
