@@ -25,8 +25,8 @@
                     echo "<li><a href='#'>Hello GUEST </a></li>";
                 }
             ?>
-            <li><a href='../../home.php'>Home Page</a> </li>
-            <li><a href='../../leaderboard/leaderboard.php'>Leaderboard</a> </li>
+            <li><a href='../home.php'>Home Page</a> </li>
+            <li><a href='../leaderboard/leaderboard.php'>Leaderboard</a> </li>
 
           <?php
                 if(isset($_SESSION["userid"])){
