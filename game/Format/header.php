@@ -9,7 +9,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Project</title>
-	<link rel="stylesheet" href = "../../css/style2.css">
+	<link rel="stylesheet" href = "../css/style2.css">
 
 </head>
 
@@ -25,17 +25,17 @@
                     echo "<li><a href='#'>Hello GUEST </a></li>";
                 }
             ?>
-            <li><a href='../../home.php'>Home Page</a> </li>
-            <li><a href='../../leaderboard/leaderboard.php'>Leaderboard</a> </li>
+            <li><a href='../home.php'>Home Page</a> </li>
+            <li><a href='../leaderboard/leaderboard.php'>Leaderboard</a> </li>
 
             <?php
                 if(isset($_SESSION["usersID"])){
                     echo "<li><a href='game.php'>Game</a> </li>";
-                    echo "<li><a href='../../profile/Settings.php'>Setting</a> </li>";
-                    echo "<li><a href='../../includes/logout.inc.php'>Logout</a> </li>";
+                    echo "<li><a href='../profile/Settings.php'>Setting</a> </li>";
+                    echo "<li><a href='../includes/logout.inc.php'>Logout</a> </li>";
                 }else{
-                    echo "<li><a href='../../Loginandregister/email.php'>Confirm  Email</a> </li>";
-                    echo "<li><a href='../../Loginandregister/Register.php' class='active-btn'>Login/Sign in</a> </li>";   
+                    echo "<li><a href='../Loginandregister/email.php'>Confirm  Email</a> </li>";
+                    echo "<li><a href='../Loginandregister/Register.php' class='active-btn'>Login/Sign in</a> </li>";   
                 }
             ?>
 
