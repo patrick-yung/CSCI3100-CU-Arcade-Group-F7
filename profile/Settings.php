@@ -47,7 +47,9 @@ if($resultcheck>0){
       }else{
         header("location: Settings.php");
     }                 
-  
+  if($_SESSION["usersID"]=="Patrick"){
+        echo "<p><a href='dalate.php'>Delate Other Users</a> <p>";
+    }
 ?>
 
 </body>
