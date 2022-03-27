@@ -3,56 +3,54 @@
 ?>
 <?php include_once '../includes/dbh.inc.php'?>
 <?php include_once 'Format/header.php'?>
-<?php include_once '../includes/admins.php'?>
-
 
 <body>
+<div class='empty'>
+</div>
 
 <?php
 
 $currentname=$_SESSION["usersID"];
-$sql = "SELECT * FROM users where usersID = $currentname" ;
+$sql = "SELECT * FROM users" ;
 
 //
 $result = mysqli_query($conn, $sql);
 $resultcheck = mysqli_num_rows($result);
-
 if($resultcheck>0){
-  $row = mysqli_fetch_assoc($result);
-    $id = $row['usersID'];
-    $sqlImg = "SELECT * FROM profileimg WHERE userid = '$id'";
-    $resultImg = mysqli_query($conn, $sqlImg);
-    $rowImg=mysqli_fetch_assoc($resultImg);
-    echo "<div>";
-        if($rowImg['have']== 2){
-            echo "HELLO";
-            echo "<img src='Upload/profile".$id.".png'".mt_rand().">";
-        }else{
-            echo "<img src='Upload/deafult.png'>";
+
+
+    while($row = mysqli_fetch_assoc($result)){;
+        $id = $row['usersID'];
+        $sqlImg = "SELECT * FROM profileimg WHERE userid = '$id'";
+        $resultImg = mysqli_query($conn, $sqlImg);
+        while($rowImg = mysqli_fetch_assoc($resultImg)){
+        echo "<table>";
+            echo "<tr>";
+            if($rowImg['have']== 2){
+                echo "<img src='Upload/profile".$id.".png'".mt_rand().">";
+            }else{
+                echo "<img src='Upload/deafult.png'>";
+            }
+
+            //
+            echo "
+                 <tr>".$row['usersID']."</tr>
+                <tr>".$row['usersName']."</tr>
+                <tr>".$row['usersEmail']."</tr>
+                <tr>
+                <tr><a href='delate_function.php?id=".$row['usersID']."' id='btn'>Delete</a></td>  
+                </tr>
+            </tr>
+            "; 
+            
+        echo "</table>";
         }
-
-        //
-        echo $row['usersName'];
-        echo $row['usersEmail'];
-
-      echo "</div>";
-  }
-
-        
-      
-      if(isset($_SESSION["usersName"])){
-          echo "You are Login In ";
-          echo "<p>HELLO THERE: ". $_SESSION["usersName"] . "</p>";
-          echo "<form action ='upload.php' method='POST' enctype='multipart/form-data'>
-          <input type ='file' name='file'>
-          <button type='submit' name='submit'>Upload Profile Picture</button>
-                  </form>";
-      }else{
-        header("location: Settings.php");
-    }                 
-    if($_SESSION["user_level"]==1){
-        echo "<p><a href='delate.php'>Delate Other Users</a> <p>";
     }
+}
+
+      
+                       
+  
 ?>
 
 </body>
