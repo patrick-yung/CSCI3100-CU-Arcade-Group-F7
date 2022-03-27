@@ -7,12 +7,16 @@
 
 
 <body>
+    <div class=empty2>
+        
+    </div>
 
 <link rel="stylesheet" href = "Format/style.css">
 
 <?php
 
 $currentname=$_SESSION["usersID"];
+
 $sql = "SELECT * FROM users where usersID = $currentname" ;
 
 //
@@ -20,11 +24,13 @@ $result = mysqli_query($conn, $sql);
 $resultcheck = mysqli_num_rows($result);
 
 if($resultcheck>0){
-  $row = mysqli_fetch_assoc($result);
-    $id = $row['usersID'];
+    $row = mysqli_fetch_assoc($result);
+    $id=$_SESSION["usersID"];
+
     $sqlImg = "SELECT * FROM profileimg WHERE userid = '$id'";
     $resultImg = mysqli_query($conn, $sqlImg);
     $rowImg=mysqli_fetch_assoc($resultImg);
+
     echo "<div class='card'>";
         if($rowImg['have']== 2){
             echo "<h1>HELLO</h1>";
