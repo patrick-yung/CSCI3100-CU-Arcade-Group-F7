@@ -53,6 +53,6 @@
            <p><font size="4">Press SPACE to play again!</font></p>
         </div>
     </div>
-    <script src="js/file.js"></script>
+    <script src="file.js"></script>
 </body>
 </html>
