@@ -5,6 +5,8 @@
 <?php include_once 'Format/header.php'?>
 
 <body>
+<link rel="stylesheet" href = "Format/style.css">
+
 <div class='empty'>
 </div>
 
@@ -56,4 +58,3 @@ if($resultcheck>0){
 </body>
 
 <?php include_once 'Format/footer.php'?>
-
