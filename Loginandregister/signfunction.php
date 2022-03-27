@@ -81,16 +81,21 @@ function createUser($conn, $name, $email, $username, $password){
         mysqli_stmt_close($stmt);
 
 
-        $sql = "SELECT * FROM users usersName";
+        $sql = "SELECT * FROM users WHERE usersName = '$name'";
         $result = mysqli_query($conn, $sql);
 
-        if(mysqli_num_rows($result) > 0){
-            while($row= mysqli_fetch_assoc($result)){
+            $row= mysqli_fetch_assoc($result);
                 $id =$row['usersID'];
                 $sqlImg = "INSERT INTO profileimg (userid, have) VALUES ('$id', 1)";
                 mysqli_query($conn, $sqlImg);
-            }
-        }
+            
+        
+        $id =$row['usersID'];
+
+        $sqlImg = "INSERT INTO leader (userid, score) VALUES ('$id', 0)";
+
+
+
         die("Please verify your email <a href='email.php?email=" . $email . "'>from here</a>");
         exit();
     }
