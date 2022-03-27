@@ -32,3 +32,31 @@
   button:hover, a:hover {
     opacity: 0.7;
   }
+.empty{
+    height: 100px;
+}
+  table, th, td {
+    
+    border: 1px solid black;
+    
+    border-collapse: collapse;
+    
+    }
+    
+    th, td {
+    
+    padding: 10px;
+    
+    }
+    
+    th {
+    
+    background-color: #FDDF95;
+    
+    }
+    
+    colgroup {
+    
+    width: 250px;
+    
+    }
