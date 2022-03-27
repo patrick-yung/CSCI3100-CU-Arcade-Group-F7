@@ -35,6 +35,9 @@
 .empty{
     height: 100px;
 }
+.empty2{
+    height: 100px;
+}
   table, th, td {
     
     border: 1px solid black;
@@ -60,3 +63,8 @@
     width: 250px;
     
     }
+
+    img {
+        width: 200px;
+        height: 200px;
+      }
