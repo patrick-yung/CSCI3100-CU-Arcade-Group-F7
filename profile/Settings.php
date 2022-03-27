@@ -3,42 +3,49 @@
 ?>
 <?php include_once '../includes/dbh.inc.php'?>
 <?php include_once 'Format/header.php'?>
+<?php include_once '../includes/admins.php'?>
 
 
 <body>
 
+<link rel="stylesheet" href = "Format/style.css">
+
 <?php
+
 $currentname=$_SESSION["usersID"];
 $sql = "SELECT * FROM users where usersID = $currentname" ;
+
+//
 $result = mysqli_query($conn, $sql);
 $resultcheck = mysqli_num_rows($result);
 
 if($resultcheck>0){
-  while($row = mysqli_fetch_assoc($result)){
-
+  $row = mysqli_fetch_assoc($result);
     $id = $row['usersID'];
     $sqlImg = "SELECT * FROM profileimg WHERE userid = '$id'";
     $resultImg = mysqli_query($conn, $sqlImg);
     $rowImg=mysqli_fetch_assoc($resultImg);
-    echo "<div>";
+    echo "<div class='card'>";
         if($rowImg['have']== 2){
-            echo "HELLO";
+            echo "<h1>HELLO</h1>";
             echo "<img src='Upload/profile".$id.".png'".mt_rand().">";
         }else{
             echo "<img src='Upload/deafult.png'>";
         }
+
+        //
+        echo "<p>";
         echo $row['usersName'];
+        echo "</p>";
+        echo "<p>";
         echo $row['usersEmail'];
-
-      echo "</div>";
+        echo "</p>";
   }
-}
 
-
-              
+        
       
       if(isset($_SESSION["usersName"])){
-          echo "You are Login In Hello";
+          echo "You are Login In ";
           echo "<p>HELLO THERE: ". $_SESSION["usersName"] . "</p>";
           echo "<form action ='upload.php' method='POST' enctype='multipart/form-data'>
           <input type ='file' name='file'>
@@ -47,9 +54,11 @@ if($resultcheck>0){
       }else{
         header("location: Settings.php");
     }                 
-  if($_SESSION["usersID"]=="Patrick"){
-        echo "<p><a href='dalate.php'>Delate Other Users</a> <p>";
+    if($_SESSION["user_level"]==1){
+        echo "<p><a href='delate.php'>Delate Other Users</a> <p>";
     }
+    echo "</div>";
+
 ?>
 
 </body>
