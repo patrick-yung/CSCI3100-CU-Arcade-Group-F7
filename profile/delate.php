@@ -50,7 +50,7 @@ if($resultcheck>0){
       }else{
         header("location: Settings.php");
     }                 
-    if($_SESSION["usersName"]=="Patrick"){
+    if($_SESSION["user_level"]==1){
         echo "<p><a href='delate.php'>Delate Other Users</a> <p>";
     }
 ?>
