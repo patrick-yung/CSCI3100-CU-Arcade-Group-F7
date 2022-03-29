@@ -1,7 +1,7 @@
 <?php
     session_start();
 ?>
-<?php include_once '../Format/header.php'?>
+<?php include_once 'Format/header.php'?>
 
 
 	<div class="form-box" section class="change">
@@ -18,4 +18,4 @@
 	
 
 
-<?php include_once '../Format/footer.php'?>
+<?php include_once 'Format/footer.php'?>
