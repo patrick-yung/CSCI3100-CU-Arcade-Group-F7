@@ -48,8 +48,6 @@ if($resultcheck>0){
         echo "</p>";
   }
 
-        
-      
       if(isset($_SESSION["usersName"])){
           echo "You are Login In ";
           echo "<p>HELLO THERE: ". $_SESSION["usersName"] . "</p>";
@@ -60,13 +58,22 @@ if($resultcheck>0){
       }else{
         header("location: Settings.php");
     }                 
-    if($_SESSION["user_level"]==1){
-        echo "<p><a href='delate.php'>Delate Other Users</a> <p>";
-    }
-    echo "</div>";
+    
 
 ?>
 
+<form action="changepassword.php" method="post">
+			<input type="text" autocomplete="off" name="newpassword" placeholder="New password" />
+			<button type="change" name="change" >Change Now</button>
+            </form>
+
 </body>
+<?php
+if($_SESSION["user_level"]==1){
+    echo "<p><a href='delate.php'>Delate Other Users</a> <p>";
+}
+?>
+</div>;
+
 
 <?php include_once 'Format/footer.php'?>
