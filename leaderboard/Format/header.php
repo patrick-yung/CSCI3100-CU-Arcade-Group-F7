@@ -19,7 +19,7 @@
         <a href="#" class= "icon">CU Arcade</a>
         <ul>
         <?php
-                 if(isAdmin()){
+                 if($_SESSION["user_level"]==1){
                     echo "<li><a href='#'>WELCOME Admin </a></li>";
                 }else{
                     echo "<li><a href='#'>Hello GUEST </a></li>";

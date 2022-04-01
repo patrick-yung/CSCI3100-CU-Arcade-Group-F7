@@ -1,30 +1,10 @@
-<?php
-    session_start();
+
+<?php include_once 'Format/header.php'?>
+<?php echo "<p>HELLO THERE: ". $_SESSION["usersName"] . "</p>";
 ?>
 
-<?php include_once '../includes/dbh.inc.php'?>
-<?php include_once 'Format/header.php'?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dino Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<php?
-    $id=$_SESSION["usersID"];
-    $sqlImg = "SELECT * FROM profileimg WHERE userid = '$id'";
-    $resultImg = mysqli_query($conn, $sqlImg);
-    $rowImg=mysqli_fetch_assoc($resultImg);
-
-    if($rowImg["highestScore"] < score){
-        score = $rowImg["highestScore"];
-    }
-?></php>
-
 <body>
+    
     <p><font size="4">Press ⎵ to start game</font></p>
     <p><font size="4">Press ↑ to jump</font></p>
 
@@ -55,4 +35,3 @@
     </div>
     <script src="file.js"></script>
 </body>
-</html>
