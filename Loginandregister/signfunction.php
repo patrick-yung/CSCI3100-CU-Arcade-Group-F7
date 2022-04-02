@@ -90,11 +90,8 @@ function createUser($conn, $name, $email, $username, $password){
                 mysqli_query($conn, $sqlImg);
             
         
-         /*
-        $id =$row['usersID'];
-        $sqlImg = "INSERT INTO leaderboard (userid, score) VALUES ('$id', 0)";
-         mysqli_query($conn, $sqlImg);
-        */
+        $sqlImg = "INSERT INTO leaderboard (username, usersID, highestscore) VALUES ('$name', '$id', 0)";
+        mysqli_query($conn, $sqlImg);
 
 
         die("Please verify your email <a href='email.php?email=" . $email . "'>from here</a>");
