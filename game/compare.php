@@ -13,12 +13,8 @@
     if($rowImg["highestscore"] < $score){
         $sql = "UPDATE leaderboard set highestscore='$score' WHERE usersID= '$id'";
         $result = mysqli_query($conn, $sql);
-        if ($result) {  
-            echo "Error: ".$score;  
-
-        }else{  
-            echo "Error: ".mysqli_error($conn);  
-       }  
+        header("location: game.php");
+ 
     }else{
     header("location: game.php");
     }
