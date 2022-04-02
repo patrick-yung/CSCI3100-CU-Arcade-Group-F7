@@ -18,7 +18,7 @@ body {
     overflow: hidden;
 }
 
-#container #dino {
+#container #pikachu {
     height: 70px;
     width: 70px;
     position: absolute;
@@ -27,17 +27,17 @@ body {
     z-index: 2;
 }
 
-#container #dino img {
+#container #pikachu img {
     height: 70px;
     width: 70px;
     z-index: 2;
 }
 
-.dinoActive {
-    animation: animateDino 0.5s linear infinite;
+.pikachuActive {
+    animation: animatepikachu 0.5s linear infinite;
 }
 
-@keyframes animateDino {
+@keyframes animatepikachu {
 
     0%,
     100% {
