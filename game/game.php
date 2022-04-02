@@ -18,8 +18,8 @@
     <p><font size="4">Press ↑ to jump</font></p>
 
     <div id="container">
-        <div id="dino">
-            <img src="assets/dino.png" alt="dino">
+        <div id="pikachu">
+            <img src="assets/pikachu.png" alt="pikachu">
         </div>
         <div id="block">
             <img src="assets/block.png" alt="block">
