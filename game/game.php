@@ -15,6 +15,23 @@
             <img src="assets/block.png" alt="block">
         </div>
         <div id="road">
+<?php include_once 'Format/header.php'?>
+<?php echo "<p>HELLO THERE: ". $_SESSION["usersName"] . "</p>";
+?>
+
+<body>
+    
+    <p><font size="4">Press ⎵ to start game</font></p>
+    <p><font size="4">Press ↑ to jump</font></p>
+
+    <div id="container">
+        <div id="pikachu">
+            <img src="assets/pikachu.png" alt="pikachu">
+        </div>
+        <div id="block">
+            <img src="assets/block.png" alt="block">
+        </div>
+        <div id="road">
             <img src="assets/road.png" alt="road">
         </div>
         <div id="cloud">
@@ -56,7 +73,6 @@ let scoreCounter = () => {
 //start Game
 window.addEventListener("keydown", (start) => {
     //console.log(start);
-    playerScore = 0;
 
     if (start.code == "Space") {
         gameOver.style.display = "none";
