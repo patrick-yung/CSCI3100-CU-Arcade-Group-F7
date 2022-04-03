@@ -112,13 +112,11 @@ let result = setInterval(() => {
     if (pikachuBottom <= 80 && blockLeft >= 10 && blockLeft <= 80) {
         
         //console.log("Game Over");
-        gameOver.style.display = "block";
-        block.classList.remove("blockActive");
-        road.firstElementChild.style.animation = "none";
-        cloud.firstElementChild.style.animation = "none";
+        clearInterval(interval);
+        
         window.location.href="compare.php?score="+playerScore;
 
-        clearInterval(interval);
+        
         playerScore = 0;
     }
 }, 10);
