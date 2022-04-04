@@ -102,6 +102,18 @@ window.addEventListener("keydown", (e) => {
         }
 });
 
+//update score
+window.addEventListener("keydown", (update) => {
+    //console.log(update);
+
+    if(update.key == "Enter"){
+        //compare and update highest score
+        window.location.href="Format/compare.php?score="+playerScore;
+        playerScore = 0;
+    }
+}
+    
+    
 let result = setInterval(() => {
     let pikachuBottom = parseInt(getComputedStyle(pikachu).getPropertyValue("bottom"));
     //console.log("dinoBottom" + dinoBottom);
@@ -112,12 +124,12 @@ let result = setInterval(() => {
     if (pikachuBottom <= 80 && blockLeft >= 10 && blockLeft <= 80) {
         
         //console.log("Game Over");
-        clearInterval(interval);
+        //stop animation
+        gameOver.style.display = "block";
+        block.classList.remove("blockActive");
+        road.firstElementChild.style.animation = "none";
+        cloud.firstElementChild.style.animation = "none";
         
-        window.location.href="compare.php?score="+playerScore;
-
-        
-        playerScore = 0;
     }
 }, 10);
     </script>';
