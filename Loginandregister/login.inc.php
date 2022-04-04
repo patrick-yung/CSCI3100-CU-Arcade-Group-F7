@@ -1,5 +1,9 @@
 <?php
-
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Function used for registering an account
+*/
 if(isset($_POST["LOGIN"])){
 $username=$_POST["uid"];
 $password=$_POST["pwd"];

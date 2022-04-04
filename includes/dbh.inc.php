@@ -1,3 +1,12 @@
+<?
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Connecting to database
+*/
+?>
+
+
 <?php
 $servername = "localhost";
 $dBusersName = "root";

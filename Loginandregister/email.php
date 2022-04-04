@@ -1,3 +1,12 @@
+<?
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Frontend for users input email confirmation
+*/
+?>
+
+
 <php
     session_start();
 ?>

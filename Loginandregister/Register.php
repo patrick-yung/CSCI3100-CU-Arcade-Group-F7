@@ -1,6 +1,12 @@
 <?php include_once 'Format/header.php'?>
 <?php include_once '../includes/admins.php'?>
-
+<?php
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Front end for registering account and login
+*/
+?>
 
 	<div class="form-box" section class="signin/reg">
 		<div class="button">

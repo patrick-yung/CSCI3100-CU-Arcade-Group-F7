@@ -1,3 +1,11 @@
+<?
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Check if current user is admin
+*/
+?>
+
 <?php
 function isAdmin(){
 

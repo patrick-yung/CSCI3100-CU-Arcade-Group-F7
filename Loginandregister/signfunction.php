@@ -6,7 +6,12 @@ use PHPMailer\PHPMailer\Exception;
 require '../vendor/autoload.php';
 
 
- 
+ /*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: check if register details are correct, such as password match, no empty input, etc.
+*/
+
 function emptyInputSignup($name, $email,$username, $password, $passwordrepeat){
     $result= null;
     if(empty($name)||empty($email)||empty($username)||empty($password)||empty($passwordrepeat)){
@@ -48,7 +53,11 @@ function uidMatch($conn, $username, $email){
 }
 
 
-#Create User
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Create user by adding an entry to leaderboard, profile and users databased. Addtionally, send an email to the entered email address for confirmation
+*/
 function createUser($conn, $name, $email, $username, $password){
 
     $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd, usercode) VALUES (?, ?, ?, ?, ?);";

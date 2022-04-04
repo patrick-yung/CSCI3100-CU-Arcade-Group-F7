@@ -1,6 +1,13 @@
 <?php
     session_start();
 ?>
+<?
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Display Users profile picture, username and email. Addtionally provide the option to change currrent user's password. Admin would have an addtional option to direct into delate.php.
+*/
+?>
 <?php include_once '../includes/dbh.inc.php'?>
 <?php include_once 'Format/header.php'?>
 <?php include_once '../includes/admins.php'?>

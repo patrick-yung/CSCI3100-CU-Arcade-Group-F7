@@ -1,7 +1,13 @@
+<?
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Reset selected user's password to "0000"
+*/
+?>
+
 <?php
 include_once '../includes/dbh.inc.php';
-
-
 if (isset($_GET['id'])) {  
      $id = $_GET['id'];  
      $password="0000";

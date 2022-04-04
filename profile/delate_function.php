@@ -1,7 +1,13 @@
+<?
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Delate selected user from all database but the leaderboard
+*/
+?>
+
 <?php
 include_once '../includes/dbh.inc.php';
-
-
 if (isset($_GET['id'])) {  
      $id = $_GET['id'];  
      $query = "DELETE FROM `users` WHERE usersID = '$id'";  

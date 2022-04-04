@@ -2,7 +2,12 @@
 session_start();
 include_once '../includes/dbh.inc.php';
 $id = $_SESSION['usersID'];
-
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: To upload a profile picture onto profiledatabase
+Reference: Dani Krossing
+*/
 if(isset($_POST['submit'])){
     $file=$_FILES['file'];
     print_r($file);

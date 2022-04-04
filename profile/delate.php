@@ -3,7 +3,13 @@
 ?>
 <?php include_once '../includes/dbh.inc.php'?>
 <?php include_once 'Format/header.php'?>
-
+<?
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Frontend: Display all users in the databse with the option to delate other users or reset their password to "000"
+*/
+?>
 <body>
 <link rel="stylesheet" href = "Format/style.css">
 

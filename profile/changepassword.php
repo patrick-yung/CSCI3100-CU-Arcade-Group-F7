@@ -1,3 +1,12 @@
+<?
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Change current user's password
+*/
+?>
+
+
 <?php
 session_start();
 include_once '../includes/dbh.inc.php';

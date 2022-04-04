@@ -1,3 +1,11 @@
+<?
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Compare databased with expected verification code and update according
+*/
+?>
+
 <?php
 session_start();
 require_once '../includes/dbh.inc.php';

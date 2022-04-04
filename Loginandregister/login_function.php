@@ -1,7 +1,12 @@
 
 <?php
 
-//Login Stuff//
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Check if users enter empty login deatils, and if user exist already.
+*/
+
 function emptyInputLogin($username, $password){
     $result= null;
     if(empty($username)||empty($password)){
@@ -11,6 +16,7 @@ function emptyInputLogin($username, $password){
     }
     return $result;
 }
+
 
 #Check if User exist
 function uidMatch($conn, $username, $email){
@@ -33,6 +39,12 @@ function uidMatch($conn, $username, $email){
     }
 }
 
+
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Start Session for user, and make their username, ID and level global to asscess anywhere in this website
+*/
 
 function loginUser($conn, $username, $password){
     $uidExists=uidMatch($conn, $username, $username);

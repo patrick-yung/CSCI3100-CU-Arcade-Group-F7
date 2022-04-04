@@ -1,7 +1,11 @@
 <?php
 require_once '../includes/dbh.inc.php';
 
-
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Reset password function
+*/
 
 if(isset($_POST["resetsubmit"])){
     $email = mysqli_real_escape_string($conn, $_POST["email"]) ;

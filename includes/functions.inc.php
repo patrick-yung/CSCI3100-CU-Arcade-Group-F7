@@ -1,3 +1,11 @@
+
+<?
+/*
+Author: Patrick Yung
+Last Update:04/04/2022
+Function: Send Confirmation emails to registering users
+*/
+?>
 <?php
 #Reset Password
 use PHPMailer\PHPMailer\PHPMailer;
