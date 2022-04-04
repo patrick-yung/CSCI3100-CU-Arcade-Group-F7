@@ -41,12 +41,12 @@
             <p>Score<b>00</b></p>
         </div>
         <div id = "gameStart">
-            <p>press ↑ to start </p>
+            <p>press SPACE to start </p>
             <p><font size="4">Press ↑ to jump</font></p>
         </div>
         <div id="gameOver">
             <p>Game Over </p>
-           <p><font size="4">Press SPACE to play again!</font></p>
+           <p><font size="4">Press enter to play again!</font></p>
         </div>
     </div>
    ' <script language ="javascript">
