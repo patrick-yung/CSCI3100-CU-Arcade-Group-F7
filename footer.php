@@ -1,7 +1,7 @@
   <footer>
-        <a class = "social-icon" href = "https://www.instagram.com/cu_arcade/?utm_medium=copy_link" target = "_blank">
-            <img src = "../instagram.png">
-        </a>
+        <a href="https://www.instagram.com/cu_arcade/?utm_medium=copy_link" class="instagram">   
+          <img src="/instagram.png" alt = "instagram">
+        </a> 
   </footer>
       
   </body>
