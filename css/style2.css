@@ -266,16 +266,17 @@ right: 50px;
 }
 
 /*footer*/
-#social-icon{
-    width: 100px;
-    height: 100px;
-    position: relative;
+#instagram {
+    height: 150px;
+    width: 150px;
+    position: absolute;
     z-index: 999
-}
+}  
 
-#social-icon img{
-    width: 100px;
-    height: 100px;
-    position: relative;
+#instagram img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
     z-index: 999
+}  ex: 999
 }
