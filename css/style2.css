@@ -264,3 +264,18 @@ right: 50px;
   -o-transition:all ease-in-out 500ms;
 
 }
+
+/*footer*/
+#social-icon{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    z-index: 999
+}
+
+#social-icon img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    z-index: 999
+}
