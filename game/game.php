@@ -111,7 +111,7 @@ window.addEventListener("keydown", (update) => {
         window.location.href="Format/compare.php?score="+playerScore;
         playerScore = 0;
     }
-}
+});
     
     
 let result = setInterval(() => {
