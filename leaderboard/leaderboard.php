@@ -6,12 +6,14 @@
 
 <style>
     table, th, td {
-        border:1px solid black;
+        border:2px solid black;
         border-collapse: collapse;
     }
     table.center {
         margin-left: auto; 
         margin-right: auto;
+        margin-top:150px;
+        text-align: center;
     }
 </style>
     <body>
