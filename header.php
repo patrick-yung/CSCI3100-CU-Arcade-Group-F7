@@ -10,6 +10,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Project</title>
 	<link rel="stylesheet" href = "css/style2.css">
+	
+	<!-- footer -->
+	<style>
+      	p.text{
+        	text-align: center;
+      	}
+      	img.IG{
+        	display: block;
+        	margin-left: auto;
+        	margin-right: auto;
+        	width: 40;
+        	height: 40;
+      	}
+     	</style> 
 
 </head>
 
