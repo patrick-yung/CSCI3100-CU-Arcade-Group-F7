@@ -10,5 +10,5 @@ if(isset($_POST['change'])){
     $sql = "UPDATE users set usersPwd='$hashed' WHERE usersID= '$id'";
     $result = mysqli_query($conn, $sql);
 }
-header("location: Settings.php");
-
+die(" Successfully Change passsword <a href='Settings.php?'>back</a>");
+header("location: upload.php");
