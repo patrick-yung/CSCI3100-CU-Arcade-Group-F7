@@ -4,8 +4,8 @@
 
 <body>
     
-    <p><font size="4">Press ⎵ to start game</font></p>
-    <p><font size="4">Press ↑ to jump</font></p>
+    <p style="color:white"><font size="4">Press ⎵ to start game</font></p>
+    <p style="color:white"><font size="4">Press ↑ to jump</font></p>
 
     <div id="container">
         <div id="pikachu">
@@ -21,8 +21,8 @@
 
 <body>
     
-    <p><font size="4">Press ⎵ to start game</font></p>
-    <p><font size="4">Press ↑ to jump</font></p>
+    <p style="color:white"><font size="4">Press ⎵ to start game</font></p>
+    <p style="color:white"><font size="4">Press ↑ to jump</font></p>
 
     <div id="container">
         <div id="pikachu">
@@ -45,8 +45,8 @@
             <p><font size="4">Press ↑ to jump</font></p>
         </div>
         <div id="gameOver">
-            <p>Game Over </p>
-           <p><font size="4">Press enter to play again!</font></p>
+            <p style="color:white">Game Over </p>
+           <p style="color:white"><font size="4">Press enter to play again!</font></p>
         </div>
     </div>
    ' <script language ="javascript">
