@@ -18,7 +18,7 @@
     }
 </style>
     <body>
-    <table style="width:50%", class="center">
+    <table style="width:50%", class="center" bgcolor="white">
         <tr>
             <td>Rank</td>
             <td>User</td>
