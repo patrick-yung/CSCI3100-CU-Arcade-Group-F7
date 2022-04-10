@@ -40,17 +40,17 @@ if($resultcheck>0){
         }
 
         //
-        echo "<p>";
+        echo "<p>Name: ";
         echo $row['usersName'];
         echo "</p>";
-        echo "<p>";
+        echo "<p> Email: ";
         echo $row['usersEmail'];
         echo "</p>";
   }
 
       if(isset($_SESSION["usersName"])){
-          echo "You are Login In ";
-          echo "<p>HELLO THERE: ". $_SESSION["usersName"] . "</p>";
+          echo "You are Login In as";
+          echo "<p>Username: ". $_SESSION["usersName"] . "</p>";
           echo "<form action ='upload.php' method='POST' enctype='multipart/form-data'>
           <input type ='file' name='file'>
           <button type='submit' name='submit'>Upload Profile Picture</button>
