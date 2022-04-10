@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dino Game</title>
+    <title>Run Run Pikachu</title>
     <link rel="stylesheet" href="Format/style.css">
     <link rel="stylesheet" href = "../css/style2.css">
 
