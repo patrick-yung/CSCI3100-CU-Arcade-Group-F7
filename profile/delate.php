@@ -18,16 +18,18 @@ $sql = "SELECT * FROM users" ;
 //
 $result = mysqli_query($conn, $sql);
 $resultcheck = mysqli_num_rows($result);
+$flag = 0;
 if($resultcheck>0){
     echo"<br>";
-
+    echo "<table border: 10px solid>";
     while($row = mysqli_fetch_assoc($result)){;
+        $flag = 0;
         $id = $row['usersID'];
         $sqlImg = "SELECT * FROM profileimg WHERE userid = '$id'";
         $resultImg = mysqli_query($conn, $sqlImg);
-        echo "<table border: 10px solid>";
-        while($rowImg = mysqli_fetch_assoc($resultImg)){
-            
+        
+        while(($rowImg = mysqli_fetch_assoc($resultImg))==TRUE && $flag==0){
+            $flag = 1;
             echo "<tr><td>";
             if($rowImg['have']== 2){
                 echo "<img src='Upload/profile".$id.".png'".mt_rand()." style='width:100px;height:100px;'>";
@@ -46,8 +48,8 @@ if($resultcheck>0){
             
         
         }
-        echo "</table>";
     }
+    echo "</table>";
 }
 
       
