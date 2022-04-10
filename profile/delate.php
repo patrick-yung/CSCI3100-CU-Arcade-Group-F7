@@ -25,29 +25,28 @@ if($resultcheck>0){
         $id = $row['usersID'];
         $sqlImg = "SELECT * FROM profileimg WHERE userid = '$id'";
         $resultImg = mysqli_query($conn, $sqlImg);
+        echo "<table border: 10px solid>";
         while($rowImg = mysqli_fetch_assoc($resultImg)){
-        echo "<table>";
-            echo "<tr>";
+            
+            echo "<tr><td>";
             if($rowImg['have']== 2){
                 echo "<img src='Upload/profile".$id.".png'".mt_rand().">";
             }else{
                 echo "<img src='Upload/deafult.png'>";
             }
-
             //
-            echo "
-                 <tr>".$row['usersID']."</tr>
-                <tr>".$row['usersName']."</tr>
-                <tr>".$row['usersEmail']."</tr>
-                <tr>
-                <tr><a href='delate_function.php?id=".$row['usersID']."' id='btn'>Delete</a></td>  
-                <tr><a href='reset_function.php?id=".$row['usersID']."' id='btn'>Reset</a></td>  
-                </tr>
+            echo "</td>
+                 <td> Users ID is ".$row['usersID']."</td>
+                <td> Users name is ".$row['usersName']."</td>
+                <td> Users email is ".$row['usersEmail']."</td>
+                <td><a href='delate_function.php?id=".$row['usersID']."' id='btn'>Delete</a></td>  
+                <td><a href='reset_function.php?id=".$row['usersID']."' id='btn'>Reset</a></td>  
             </tr>
             "; 
             
-        echo "</table>";
+        
         }
+        echo "</table>";
     }
 }
 
