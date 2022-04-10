@@ -34,7 +34,7 @@
         <ul>
         <?php
                  if(isAdmin()){
-                    echo "<li><a href='#'>WELCOME ADMIN </a></li>";
+                    echo "<li><a href='#'>WELCOME Admin </a></li>";
                 }else{
                     echo "<li><a href='#'>Hello GUEST </a></li>";
                 }
