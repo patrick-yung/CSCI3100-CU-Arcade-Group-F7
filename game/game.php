@@ -4,6 +4,7 @@
 
 <body>
     
+    <p style="color:white"><font size="4">Welcome to Run Run Pikachu</font></p>
     <p style="color:white"><font size="4">Press ⎵ to start game</font></p>
     <p style="color:white"><font size="4">Press ↑ to jump</font></p>
 
