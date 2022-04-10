@@ -129,6 +129,7 @@ let result = setInterval(() => {
         block.classList.remove("blockActive");
         road.firstElementChild.style.animation = "none";
         cloud.firstElementChild.style.animation = "none";
+        clearInterval(interval);        
         
     }
 }, 10);
