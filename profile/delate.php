@@ -19,7 +19,7 @@ $sql = "SELECT * FROM users" ;
 $result = mysqli_query($conn, $sql);
 $resultcheck = mysqli_num_rows($result);
 if($resultcheck>0){
-
+    
 
     while($row = mysqli_fetch_assoc($result)){;
         $id = $row['usersID'];
@@ -30,9 +30,9 @@ if($resultcheck>0){
             
             echo "<tr><td>";
             if($rowImg['have']== 2){
-                echo "<img src='Upload/profile".$id.".png'".mt_rand().">";
+                echo "<img src='Upload/profile".$id.".png'".mt_rand()." style='width:100px;height:100px;'>";
             }else{
-                echo "<img src='Upload/deafult.png'>";
+                echo "<img src='Upload/deafult.png' style='width:100px;height:100px;'>";
             }
             //
             echo "</td>
