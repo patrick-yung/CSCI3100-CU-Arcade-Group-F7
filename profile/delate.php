@@ -19,7 +19,7 @@ $sql = "SELECT * FROM users" ;
 $result = mysqli_query($conn, $sql);
 $resultcheck = mysqli_num_rows($result);
 if($resultcheck>0){
-    
+    echo"<br>";
 
     while($row = mysqli_fetch_assoc($result)){;
         $id = $row['usersID'];
