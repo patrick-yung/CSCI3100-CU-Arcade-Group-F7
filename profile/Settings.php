@@ -70,7 +70,7 @@ if($resultcheck>0){
 </body>
 <?php
 if($_SESSION["user_level"]==1){
-    echo "<p><a href='delate.php'>Delate Other Users</a> <p>";
+    echo "<p><a href='delate.php'>Delete Other Users</a> <p>";
 }
 ?>
 </div>;
