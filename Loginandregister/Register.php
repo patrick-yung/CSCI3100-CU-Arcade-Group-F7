@@ -50,9 +50,6 @@ Function: Front end for registering account and login
 			<input type="text" autocomplete="off" name="uid" placeholder="Username/Email" />
 			<input type="password" autocomplete="off" name="pwd" placeholder="Password" />
 			<button type="submit" name="LOGIN" >Log in</button>
-			<div class="forget">
-				<a href="resetpassword.php">Forget password</a>
-			</div>
 			</form>
 			<?php
 			if(isset($_GET["error"])){

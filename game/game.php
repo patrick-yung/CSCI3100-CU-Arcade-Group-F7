@@ -4,8 +4,8 @@
 
 <body>
     
-    <p><font size="4">Press ⎵ to start game</font></p>
-    <p><font size="4">Press ↑ to jump</font></p>
+    <p style="color:white"><font size="4">Press ⎵ to start game</font></p>
+    <p style="color:white"><font size="4">Press ↑ to jump</font></p>
 
     <div id="container">
         <div id="pikachu">
@@ -21,8 +21,8 @@
 
 <body>
     
-    <p><font size="4">Press ⎵ to start game</font></p>
-    <p><font size="4">Press ↑ to jump</font></p>
+    <p style="color:white"><font size="4">Press ⎵ to start game</font></p>
+    <p style="color:white"><font size="4">Press ↑ to jump</font></p>
 
     <div id="container">
         <div id="pikachu">
@@ -41,12 +41,12 @@
             <p>Score<b>00</b></p>
         </div>
         <div id = "gameStart">
-            <p>press ↑ to start </p>
+            <p>press SPACE to start </p>
             <p><font size="4">Press ↑ to jump</font></p>
         </div>
         <div id="gameOver">
-            <p>Game Over </p>
-           <p><font size="4">Press SPACE to play again!</font></p>
+            <p style="color:white">Game Over </p>
+           <p style="color:white"><font size="4">Press enter to play again!</font></p>
         </div>
     </div>
    ' <script language ="javascript">
@@ -102,6 +102,18 @@ window.addEventListener("keydown", (e) => {
         }
 });
 
+//update score
+window.addEventListener("keydown", (update) => {
+    //console.log(update);
+
+    if(update.key == "Enter"){
+        //compare and update highest score
+        window.location.href="compare.php?score="+playerScore;
+        playerScore = 0;
+    }
+});
+    
+    
 let result = setInterval(() => {
     let pikachuBottom = parseInt(getComputedStyle(pikachu).getPropertyValue("bottom"));
     //console.log("dinoBottom" + dinoBottom);
@@ -112,12 +124,13 @@ let result = setInterval(() => {
     if (pikachuBottom <= 80 && blockLeft >= 10 && blockLeft <= 80) {
         
         //console.log("Game Over");
-        clearInterval(interval);
+        //stop animation
+        gameOver.style.display = "block";
+        block.classList.remove("blockActive");
+        road.firstElementChild.style.animation = "none";
+        cloud.firstElementChild.style.animation = "none";
+        clearInterval(interval);        
         
-        window.location.href="compare.php?score="+playerScore;
-
-        
-        playerScore = 0;
     }
 }, 10);
     </script>';

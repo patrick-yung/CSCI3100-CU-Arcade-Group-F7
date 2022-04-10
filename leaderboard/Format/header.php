@@ -36,7 +36,6 @@
                     echo "<li><a href='../profile/Settings.php'>Setting</a> </li>";
                     echo "<li><a href='../includes/logout.inc.php'>Logout</a> </li>";
                 }else{
-                    echo "<li><a href='../Loginandregister/email.php'>Confirm  Email</a> </li>";
                     echo "<li><a href='../Loginandregister/Register.php' class='active-btn'>Login/Sign in</a> </li>";   
                 }
             ?>

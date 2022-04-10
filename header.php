@@ -10,6 +10,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Project</title>
 	<link rel="stylesheet" href = "css/style2.css">
+	
+	<!-- footer -->
+	<style>
+      	p.text{
+        	text-align: center;
+      	}
+      	img.IG{
+        	display: block;
+        	margin-left: auto;
+        	margin-right: auto;
+        	width: 40;
+        	height: 40;
+      	}
+     	</style> 
 
 </head>
 
@@ -20,7 +34,7 @@
         <ul>
         <?php
                  if(isAdmin()){
-                    echo "<li><a href='#'>WELCOME ADMIN </a></li>";
+                    echo "<li><a href='#'>WELCOME Admin </a></li>";
                 }else{
                     echo "<li><a href='#'>Hello GUEST </a></li>";
                 }
@@ -34,7 +48,6 @@
                     echo "<li><a href='profile/Settings.php'>Setting</a> </li>";
                     echo "<li><a href='includes/logout.inc.php'>Logout</a> </li>";
                 }else{
-                    echo "<li><a href='Loginandregister/email.php'>Confirm  Email</a> </li>";
                     echo "<li><a href='Loginandregister/Register.php' class='active-btn'>Login/Sign in</a> </li>";   
                 }
             ?>

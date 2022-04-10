@@ -7,16 +7,18 @@
 
 <style>
     table, th, td {
-        border:1px solid black;
+        border:2px solid black;
         border-collapse: collapse;
     }
     table.center {
         margin-left: auto; 
         margin-right: auto;
+        margin-top:150px;
+        text-align: center;
     }
 </style>
     <body>
-    <table style="width:50%", class="center">
+    <table style="width:50%", class="center" bgcolor="white">
         <tr>
             <td>Rank</td>
             <td>User</td>
