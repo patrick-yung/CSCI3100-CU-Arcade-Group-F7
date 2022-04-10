@@ -1,7 +1,7 @@
 <?php
     session_start();
 ?>
-<?php include_once 'header.php'?>
+<?php include_once 'Format/header.php'?>
 <?php
         if(isset($_SESSION["userid"])){
             echo "<h3>Hello there ". $_SESSION["useruid"] . "</h3>";
@@ -41,4 +41,4 @@
 </body>
 
 
-<?php include_once 'footer.php'?>
+<?php include_once 'Format/footer.php'?>
