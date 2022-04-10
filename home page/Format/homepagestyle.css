@@ -1,0 +1,50 @@
+
+body {
+    display: grid;
+    place-items: center;
+    height: 50vh;
+}
+
+#container {
+    height: 1200px;
+    width: 1200px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+}
+
+#container img{
+    height: 1000px;
+    width: 1000px;
+    z-index: 1;
+}
+
+#container #logo{
+    height: 70px;
+    width: 70px;
+    position: relative;
+    z-index: 2;
+}
+
+#container #logo img{
+    height: 70px;
+    width: 70px;
+    z-index: 2;
+}
+
+#container #intro{
+    z-index: 2;
+}
+
+#container #login{
+    height: 25px;
+    width: 65px;
+    z-index: 2;
+}
+
+#container #login img{
+    height: 25px;
+    width: 65px;
+    z-index: 2;
+}
