@@ -27,7 +27,7 @@ $resultcheck = mysqli_num_rows($result);
 $flag = 0;
 if($resultcheck>0){
     echo"<br>";
-    echo "<table border: 10px solid>";
+    echo "<table border: 10px solid bgcolor='white'>";
     while($row = mysqli_fetch_assoc($result)){;
         $flag = 0;
         $id = $row['usersID'];

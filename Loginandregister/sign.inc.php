@@ -14,6 +14,12 @@ if(isset($_POST["submit"])){
     $username = $_POST["username"];
     $password = $_POST["password"];
     $passwordrepeat = $_POST["passwordrepeat"];
+    
+    if(uidMatch($conn, $username, $email)!==false){
+        header("location: Register.php?error=User exist");
+        exit();
+    }
+    
     if(emptyInputSignup($name, $email,$username, $password, $passwordrepeat)!== false){
         header("location: Register.php?error=emtpyinput");
         exit();
