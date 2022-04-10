@@ -108,7 +108,7 @@ window.addEventListener("keydown", (update) => {
 
     if(update.key == "Enter"){
         //compare and update highest score
-        window.location.href="Format/compare.php?score="+playerScore;
+        window.location.href="compare.php?score="+playerScore;
         playerScore = 0;
     }
 });
