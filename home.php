@@ -86,7 +86,7 @@
         }
                     
         ?>
-        <h3>About Me</h3>
+        <h3>About CU Arcade</h3>
         <p>In this day and age, due to the COVID-19 situation in Hong Kong, university students are hard to meet each other face to face 
 	in the campus. As students seldom have interaction during the online lessons, they hard to make new friends during the online 
 	University life. Besides, many entertainment facilities such as cinema and theme park were forced to closed under the pandemic 
