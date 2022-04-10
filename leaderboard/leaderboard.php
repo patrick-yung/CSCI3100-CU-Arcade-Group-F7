@@ -3,6 +3,7 @@
 
 ?>
 <?php include_once 'Format/header.php'?>
+<?php include_once '../includes/dbh.inc.php'?>
 
 <style>
     table, th, td {
@@ -24,10 +25,9 @@
             <td>Score</td>
         </tr>
         <?php
-        $con = mysqli_connect("localhost", "root", "", "leaderboard");
             
 
-        $result = mysqli_query($con, "SELECT highestscore, username FROM leaderboard ORDER BY highestscore DESC");
+        $result = mysqli_query($conn, "SELECT highestscore, username FROM leaderboard ORDER BY highestscore DESC");
         
         $ranking = 1;
         if (mysqli_num_rows($result)) {
