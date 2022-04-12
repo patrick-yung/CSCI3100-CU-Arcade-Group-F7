@@ -32,16 +32,17 @@ if(isset($_POST['submit'])){
                 $result = mysqli_query($conn, $sql);
                 header("Location: Settings.php?uploadsucess");
             }else{
-                echo "Your file too large ";
-                header("Location: Settings.php?uploadsucess");
+                echo "Your file too large "; 
+                header("location: Settings.php?error=Your file too large");
 
             } 
         }else{
-            echo "Error has Occur"; 
-            header("Location: Settings.php?uploadsucess");
+            echo "Error has Occur";
+            header("location: Settings.php?error=Error has Occur");
+ 
         }
     }else{
-        echo "Wrong File Type";
-        header("Location: Settings.php?uploadsucess");
+        header("location: Settings.php?error=Wrong File Type");
     }
 }
+
