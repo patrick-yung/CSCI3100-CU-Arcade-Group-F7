@@ -20,8 +20,14 @@
         <a href="#" class= "icon">CU Arcade</a>
         <ul>
         <?php
-                 if($_SESSION["user_level"]==1){
+                 if(isset($_SESSION["user_level"])){
+                     if($_SESSION["user_level"]==1){
                     echo "<li><a href='#'>WELCOME Admin </a></li>";
+                     }else
+                     {
+                        echo "<li><a href='#'>Hello: ". $_SESSION["usersName"] . "</li>";
+
+                     }
                 }else{
                     echo "<li><a href='#'>Hello GUEST </a></li>";
                 }

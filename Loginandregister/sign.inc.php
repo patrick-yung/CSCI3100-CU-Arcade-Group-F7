@@ -16,7 +16,7 @@ if(isset($_POST["submit"])){
     $passwordrepeat = $_POST["passwordrepeat"];
     
     if(uidMatch($conn, $username, $email)!==false){
-        header("location: Register.php?error=User exist");
+        header("location: Register.php?error=username taken");
         exit();
     }
     
