@@ -1,7 +1,7 @@
 <footer>
     <p style="color:white"><p class = "text">Find out more information about us on Instagram!</p>
     <a href = "https://www.instagram.com/cu_arcade/">
-      <img class = "IG" alt = "IG" src = "instagram.png">
+      <img class = "IG" alt = "IG" src = "Assets/instagram.png">
     </a>
 </footer>
   
