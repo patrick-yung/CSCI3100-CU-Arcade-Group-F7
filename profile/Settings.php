@@ -60,8 +60,23 @@ if($resultcheck>0){
           echo "<p>Username: ". $_SESSION["usersName"] . "</p>";
           echo "<form action ='upload.php' method='POST' enctype='multipart/form-data'>
           <input type ='file' name='file'>
-          <button type='submit' name='submit'>Upload Profile Picture</button>
-                  </form>";
+          <button type='submit' name='submit'>Upload Profile Picture</button>";
+        if(isset($_GET["error"])){
+        
+            if($_GET["error"]=="Wrong File Type" ){
+                echo"<p>Wrong File Type</p>";
+            }
+            if($_GET["error"]=="Error has Occur" ){
+                echo"<p>Error has Occur</p>";
+            }
+            if($_GET["error"]=="Your file too large" ){
+                echo"<p>Your file too large</p>";
+            }
+        }
+            
+        
+        echo "</form>";
+              
       }else{
         header("location: Settings.php");
     }                 
