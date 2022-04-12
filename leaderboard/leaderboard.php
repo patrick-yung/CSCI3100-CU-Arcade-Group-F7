@@ -34,7 +34,14 @@
             while ($row = mysqli_fetch_array($result)) {
                 echo "<tr><td>{$ranking}</td>
                 <td>{$row['username']}</td>
-                <td>{$row['highestscore']}</td></tr>";
+                <td>{$row['highestscore']}</td>";
+                if(isset($_SESSION["user_level"])){
+                    if($_SESSION["user_level"]==1){
+                   echo "<td><a href='reset.php?username=".$row['username']."' id='btn'>Reset</a></td> ";
+
+                    }
+                }
+                echo "</tr>";
                 $ranking++;  
             }
         }
@@ -44,3 +51,4 @@
     </body>
 
 <?php include_once 'Format/footer.php'?>
+
