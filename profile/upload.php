@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
     $fileExt = explode('.', $fileName);
 
     $fileActualExt = strtolower(end($fileExt));
-    $allowed=array('jpg','jpeg','pdf','png');
+    $allowed=array('png');
 
     if(in_array($fileActualExt,$allowed)){
         if($fileError === 0){
