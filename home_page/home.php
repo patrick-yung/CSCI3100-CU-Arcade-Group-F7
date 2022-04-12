@@ -38,7 +38,7 @@
             </p>
         </div>
     
-        <a href = "Loginandregister/Register.php">
+        <a href = "../Loginandregister/Register.php">
             <img div id = "login" alt = "login" src = "Assets/login.png">
         </a>
     
