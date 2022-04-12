@@ -16,6 +16,8 @@ if (isset($_GET['id'])) {
      $query = "DELETE FROM `profileimg` WHERE userid = '$id'";  
      $run = mysqli_query($conn,$query); 
 
+     $query = "DELETE FROM `leaderboard` WHERE usersID = '$id'";  
+     $run = mysqli_query($conn,$query); 
 
      if ($run) {  
           header('location:delate.php');  
