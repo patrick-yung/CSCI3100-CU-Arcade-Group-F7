@@ -1,66 +1,71 @@
-
-body {
-    display: grid;
-    place-items: center;
-    height: 50vh;
-}
-
-#container {
-    height: 1000px;
-    width: 1000px;
-    position: relative;
-    display:inline-flex;
-    overflow: hidden;
-    margin: 0;
-    z-index: 1;
-}
-
-#container img{
-    height: 1000px;
-    width: 1000px;
-    z-index: 1;
-}
-
-#container img #logo{
-    height: 70px;
-    width: 70px;
-    position: relative;
-    z-index: 2;
-}
-
-#container img #logo img{
-    height: 70px;
-    width: 70px;
-    z-index: 2;
-}
-
-#container img #intro{
-    z-index: 2;
-}
-
-#container img #login{
-    height: 25px;
-    width: 65px;
-    z-index: 2;
-}
-
-#container img #login img{
-    height: 25px;
-    width: 65px;
-    z-index: 2;
-}
-
-
-#instagram {
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    z-index: 999
-}  
-
-#instagram img {
-    height: 100%;
+.home-container {
     width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .arcade {
+    width: 800px;
+    height: 100%;
+    z-index: 1;
+    align-self: center;
+    object-fit: cover;
+  }
+  .icon {
+    top: 120px;
+    left: 0px;
+    right: 0px;
+    width: 100px;
+    margin: auto;
+    z-index: 2;
     position: absolute;
-    z-index: 999
-}  
+    object-fit: cover;
+  }
+  .home-text{
+    color:blue;
+    top: 230px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    z-index: 2;
+    position: absolute;
+    font-size: 36px;
+    text-align: center;
+  }
+  .home-text1 {
+    color: blue;
+    top: 300px;
+    left: 200px;
+    right: 200px;
+    z-index: 3;
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+  }
+  .home-text2 {
+    text-align: left;
+  }
+  .home-text3 {
+    text-align: left;
+  }
+  .home-text4 {
+    text-align: left;
+  }
+  .home-text5 {
+    text-align: left;
+  }
+  .home-text6 {
+    text-align: left;
+  }
+
+  .login{
+    top: 520px;
+    left: auto;
+    right: auto;
+    z-index: 3;
+    position: absolute;
+  }
+}
