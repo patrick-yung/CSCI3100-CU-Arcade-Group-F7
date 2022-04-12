@@ -6,12 +6,16 @@
 
 
 <body>
-<div class=empty2>
-        
-    </div>
+<div class="form-box" section class="signin/reg">
+
 <form action="contact.php" method="post">
 			<input type="text" autocomplete="off" name="qwer" placeholder="Message" />
 			<button type="send" name="send" >Send</button>
             </form>
 </div>
 </body>
+
+
+
+<?php include_once 'Format/footer.php'?>
+
