@@ -1,6 +1,4 @@
-<?php
-    session_start();
-?>
+
 <?php include_once 'Format/header.php'?>
 <?php
         if(isset($_SESSION["userid"])){
