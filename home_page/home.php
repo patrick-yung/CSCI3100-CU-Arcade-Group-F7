@@ -26,7 +26,7 @@
       <img
         src="Assets/CU_Arcade.png"
         alt="image"
-        class="icon"
+        class="icon01"
       />
       <span class="home-text">About CU Arcade</span>
 
