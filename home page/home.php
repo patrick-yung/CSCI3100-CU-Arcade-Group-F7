@@ -32,7 +32,7 @@
             </p>
         </element>
     
-        <a href = "Loginandregister/Register.php">
+        <a href = "../Loginandregister/Register.php">
             <img element id = "login" alt = "login" src = "Assets/login.png">
         </a>
     
