@@ -5,7 +5,7 @@ require_once 'signfunction.php';
 /*
 Author: Patrick Yung
 Last Update:04/04/2022
-Function: Function used for registering an account, this is obtaining the details
+Function: Function used for registering an account, this is obtaining the details and checking ht ID exist in database, any empty input and if typed password match with each other, if so pass the data to create users.
 */
 
 if(isset($_POST["submit"])){
