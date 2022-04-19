@@ -56,7 +56,7 @@ function uidMatch($conn, $username, $email){
 /*
 Author: Patrick Yung
 Last Update:04/04/2022
-Function: Create user by adding an entry to leaderboard, profile and users databased. Addtionally, send an email to the entered email address for confirmation
+Function: Create user by adding an entry to leaderboard, profile and users databased. Addtionally, send an email to the entered email address for confirmation with random generated code for email confirmation.
 */
 function createUser($conn, $name, $email, $username, $password){
 
