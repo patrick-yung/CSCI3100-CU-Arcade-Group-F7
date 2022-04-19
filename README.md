@@ -9,3 +9,6 @@ In this day and age, due to the COVID-19 situation in Hong Kong, university stud
 	University life. Besides, many entertainment facilities such as cinema and theme park were forced to closed under the pandemic 
 	situation, which severely limited the leisure activities that students can enjoy.  Therefore, as a group of computer software 
 	developer, we would like to introduce a new entertaining-base web application to university students in CUHK.
+
+
+This github is design that each folder represent a webpage, each webpage folder has a seperate folder including a header for nagivation bar, footer for the ending of the file and a seperate unqiue css that gives a unqiue frontend design for that specific webpage. In addtion, all webpage is link to rootfolder/includes folder functions/file. The includes folder allow the each page to connect to the databse and check if the users is admin or not. 
