@@ -2,7 +2,7 @@
 /*
 Author: Patrick Yung
 Last Update:04/04/2022
-Function: Function used for registering an account
+Function: Function used for registering an account, checks for empty input and tries to call loginUser and check if login ID match
 */
 if(isset($_POST["LOGIN"])){
 $username=$_POST["uid"];
