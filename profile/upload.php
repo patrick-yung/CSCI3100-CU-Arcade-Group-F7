@@ -5,7 +5,7 @@ $id = $_SESSION['usersID'];
 /*
 Author: Patrick Yung
 Last Update:04/04/2022
-Function: To upload a profile picture onto profiledatabase
+Function: To upload a profile picture onto profiledatabase. Check if file type and size is correct(error dectection)
 Reference: Dani Krossing
 */
 if(isset($_POST['submit'])){
