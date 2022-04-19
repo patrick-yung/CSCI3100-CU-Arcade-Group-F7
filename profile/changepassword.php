@@ -2,7 +2,7 @@
 /*
 Author: Patrick Yung
 Last Update:04/04/2022
-Function: Change current user's password
+Function: Change current user's password and sent a email to notify the user
 */
 ?>
 
