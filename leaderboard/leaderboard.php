@@ -1,3 +1,9 @@
+/*
+Author: Tam Hok Yan
+Last Update:04/04/2022
+Function: sort the score from database and combine the data into a table. It is displayed as leaderboard.
+*/
+
 <?php
     session_start();
 
