@@ -1,3 +1,11 @@
+/*
+Author: Henry Wong, Patrick Yung
+Last Update:10/04/2022
+Function: Compare and update player score at the backend
+*/
+?>
+
+
 <?php
     session_start();
 ?>
