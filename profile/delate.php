@@ -8,7 +8,7 @@
 Author: Patrick Yung
 Last Update:04/04/2022
 Function: Frontend: Display all users in the databse with the option to delate other users or reset their password to "000", only admin can see this folder
-Editor: Rocky Li
+Author: Rocky Li
 Last Update:10/04/2022
 Description: Included measures to fix issue of accounts appearing multiple times, php format changes, image format changes and logic changes
 */
