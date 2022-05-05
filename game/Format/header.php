@@ -1,3 +1,11 @@
+/*
+Author: Henry Wong
+Last Update:10/04/2022
+Function: Header of game page
+*/
+?>
+
+
 <?php
     session_start();
 ?>
