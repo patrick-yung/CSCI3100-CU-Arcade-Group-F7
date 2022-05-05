@@ -3,7 +3,6 @@ Author: Henry Wong
 Last Update:10/04/2022
 Function: Game algorithm and display
 */
-?>
 
 
 <?php include_once 'Format/header.php'?>
