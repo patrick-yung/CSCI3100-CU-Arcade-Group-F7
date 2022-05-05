@@ -1,3 +1,11 @@
+/*
+Author: Henry Wong
+Last Update: 10/04/2022
+Function: header of home page
+*/
+?>
+
+
 <?php
     session_start();
 ?>
