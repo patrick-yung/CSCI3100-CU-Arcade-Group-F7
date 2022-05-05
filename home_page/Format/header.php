@@ -1,8 +1,4 @@
-/*
-Author: Henry Wong
-Last Update:10/04/2022
-Function: footer of home page
-*/
+
 
 
 
