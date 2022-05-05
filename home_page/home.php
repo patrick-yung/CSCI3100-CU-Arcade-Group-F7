@@ -1,6 +1,6 @@
 /*
 Author: Henry Wong
-Last Update:10/04/2022
+Last Update: 10/04/2022
 Function: display home page
 */
 
