@@ -12,3 +12,9 @@ In this day and age, due to the COVID-19 situation in Hong Kong, university stud
 
 
 This github is design that each folder represent a webpage, each webpage folder has a seperate folder including a header for nagivation bar, footer for the ending of the file and a seperate unqiue css that gives a unqiue frontend design for that specific webpage. In addtion, all webpage is link to rootfolder/includes folder functions/file. The includes folder allow the each page to connect to the databse and check if the users is admin or not. 
+
+
+Server is runned with XAMPP
+-Have Apache and MySQL turn on 
+-Run/serve projects on VS
+-Have database set up in mysql accoroding to the final report
